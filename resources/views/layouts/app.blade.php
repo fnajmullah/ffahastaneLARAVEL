@@ -46,9 +46,9 @@
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             @if(Auth::check())
-                            <a class="nav-link active" aria-current="page" href="/"><i class="bi bi-house-heart-fill"></i>{{__('messages.header.home')}}</a>
+                            <a class="nav-link homelink active" aria-current="page" href="/"><i class="bi bi-house-heart-fill"></i>{{__('messages.header.home')}}</a>
                             @else
-                            <a class="nav-link active" aria-current="page" href="/dashboard"><i class="bi bi-house-heart-fill"></i>{{__('messages.header.home')}}</a>
+                            <a class="nav-link homelink active" aria-current="page" href="/dashboard"><i class="bi bi-house-heart-fill"></i>{{__('messages.header.home')}}</a>
                             @endif
                         </li>
 
@@ -130,7 +130,7 @@
                     <!-- <li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
                     </ul>
                     <form class="d-flex btn-search-field">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control me-2" type="search" placeholder="{{__('messages.header.search')}}" aria-label="Search">
                         <button class="btn-search btn btn-outline-success" type="submit">{{__('messages.header.search')}}</button>
                     </form>
 
@@ -140,13 +140,13 @@
                         @guest
                         @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('messages.header.login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('messages.login') }}</a>
                         </li>
                         @endif
 
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('messages.header.register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('messages.register') }}</a>
                         </li>
                         @endif
                         @else
@@ -173,16 +173,16 @@
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 @if(auth()->user()->role->name === 'patient')
-                                <a class="dropdown-item" href="{{url('user-profile')}}">Profile</a>
+                                <a class="dropdown-item" href="{{url('user-profile')}}">{{ __('messages.profile') }}</a>
                                 <a class="dropdown-item" href="{{ route('my.booking') }}">{{ __('My Booking') }}</a>
                                 <a class="dropdown-item" href="{{ route('my.prescription') }}">{{ __('My Prescriptions') }}</a>
                                 <a class="dropdown-item" href="{{ route('patienthistory.index') }}">{{ __('My History') }}</a>
                                 @else
-                                <a class="dropdown-item" href="{{url('dashboard')}}">Dashboard</a>
+                                <a class="dropdown-item" href="{{url('dashboard')}}">{{ __('messages.dashboard') }}</a>
                                 @endif
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('messages.header.logout') }}
+                                    {{ __('messages.logout') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -343,6 +343,10 @@
             width: 20px !important;
             height: 20px !important;
             margin-right: 5px;
+        }
+        .homelink{
+            display: flex;
+            flex-direction: row;
         }
     </style>
 </body>

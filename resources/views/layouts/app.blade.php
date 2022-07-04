@@ -210,7 +210,7 @@
                 <li class="nav-item"><a href="{{ route('privacypolicy') }}" class="nav-link px-2 text-muted">{{__('messages.footer.privacy')}}</a></li>
             </ul>
 
-            <div class="d-flex justify-content-between py-4 my-4 border-top">
+            <div class="d-flex justify-content-center py-4 my-4 border-top">
                 <p>&copy; {{ __('messages.footer.note') }}</p>
                 <ul class="list-unstyled d-flex">
                     <li class="ms-3"><a class="link-dark" href="https://twitter.com/fnajmullah"><i class="bi bi-twitter"></i></a></li>

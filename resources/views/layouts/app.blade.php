@@ -203,7 +203,7 @@
         <footer class="py-3 my-4">
 
             <ul class="nav justify-content-center">
-                <li class="nav-item"><a href="{{ route('feedback.create') }}" class="nav-link px-2 text-muted">{{__('messages.footer.feedback')}}</a></li>
+                <li class="nav-item"><a href="{{ route('feedback') }}" class="nav-link px-2 text-muted">{{__('messages.footer.feedback')}}</a></li>
                 <li class="nav-item"><a href="{{ route('investment') }}" class="nav-link px-2 text-muted">{{__('messages.footer.investment')}}</a></li>
                 <li class="nav-item"><a href="{{ route('franchising') }}" class="nav-link px-2 text-muted">{{__('messages.footer.franchising')}}</a></li>
                 <li class="nav-item"><a href="{{ route('career') }}" class="nav-link px-2 text-muted">{{__('messages.footer.career')}}</a></li>

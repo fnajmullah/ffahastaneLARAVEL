@@ -20,7 +20,7 @@ return [
     'header.solutions'=>'راه حل ها',
     'header.abouts'=>'در باره ما ',
     'header.search'=>'جستجو کردن',
-    'login'=>'وارد شدن',
+    'login'=>'ورود ',
     'register'=>'ثبت نام',
     'header.appointments'=>'قرار ملاقات ها',
     'header.bookingbydate'=>'کتاب بر اساس تاریخ',

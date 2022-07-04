@@ -36,6 +36,7 @@ Route::get('/collaboration', 'App\Http\Controllers\FrontendController@collaborat
 Route::get('/mission', 'App\Http\Controllers\FrontendController@mission')->name('mission');
 Route::get('/aim', 'App\Http\Controllers\FrontendController@aim')->name('aim');
 
+// Route::get('/cfeedback', 'App\Http\Controllers\FeedBackController@create')->name('feedback');
 
 Route::get('/investment', 'App\Http\Controllers\FrontendController@investment')->name('investment');
 Route::get('/franchising', 'App\Http\Controllers\FrontendController@franchising')->name('franchising');
@@ -70,7 +71,8 @@ Route::group(['middleware' => ['auth', 'doctor']], function () {
 
 Route::group(['middleware' => ['auth', 'patient']], function () {
     // Route::resource('feedback', 'App\Http\Controllers\FeedBackController');
-    Route::get('/feedback/create', 'App\Http\Controllers\FeedBackController@create')->name('feedback.create');
+    // Route::get('/feedback/create', 'App\Http\Controllers\FeedBackController@create')->name('feedback.create');
+    Route::get('/feedback', 'App\Http\Controllers\FeedBackController@create')->name('feedback');
     Route::post('/feedback', 'App\Http\Controllers\FeedBackController@store')->name('feedback.store');
 
     Route::post('/book/appointment', 'App\Http\Controllers\FrontendController@store')->name('booking.appointment')->middleware('auth');

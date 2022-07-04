@@ -28,6 +28,7 @@ class FeedBackController extends Controller
      */
     public function create()
     {
+        // return 'adfsaf';
         return view('cfeedback');
     }
 

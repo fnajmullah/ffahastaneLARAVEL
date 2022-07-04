@@ -12,7 +12,7 @@
             <p> {{__('messages.welcomecontent.description')}}</p>
             <div class="mt-5">
                <a href="{{url('/register')}}"> <button class="btn btn-success">{{__('messages.welcomecontent.registeraspatient')}}</button></a>
-                <a href="{{url('/login')}}"><button class="btn btn-secondary">{{ __('messages.header.login') }}</button></a>
+                <a href="{{url('/login')}}"><button class="btn btn-secondary">{{ __('messages.login') }}</button></a>
             </div>
         </div>
         @endif

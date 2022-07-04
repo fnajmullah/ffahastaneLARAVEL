@@ -46,9 +46,9 @@
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             @if(Auth::check())
-                            <a class="nav-link homelink active" aria-current="page" href="/"><i class="bi bi-house-heart-fill"></i>{{__('messages.header.home')}}</a>
-                            @else
                             <a class="nav-link homelink active" aria-current="page" href="/dashboard"><i class="bi bi-house-heart-fill"></i>{{__('messages.header.home')}}</a>
+                            @else
+                            <a class="nav-link homelink active" aria-current="page" href="/"><i class="bi bi-house-heart-fill"></i>{{__('messages.header.home')}}</a>
                             @endif
                         </li>
 

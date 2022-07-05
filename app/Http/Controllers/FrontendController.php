@@ -14,6 +14,7 @@ use App\Models\Department;
 use App\Models\Operation;
 use App\Models\Medication;
 use App\Models\Medicalcondition;
+use App\Models\feedback;
 
 class FrontendController extends Controller
 {

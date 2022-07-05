@@ -10,6 +10,7 @@ use App\Models\Attachment;
 use App\Models\Medication;
 use App\Models\Operation;
 use App\Models\User;
+use App\Models\feedback;
 
 class PrescriptionController extends Controller
 {

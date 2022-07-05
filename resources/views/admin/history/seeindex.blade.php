@@ -50,7 +50,6 @@
                             <th>Address</th>
                             <th>Phone Number</th>
                             <th>Gender</th>
-                            <th>Education</th>
                             <th>Description</th>
                             <th>image</th>
                         </tr>
@@ -62,7 +61,6 @@
                             <td>{{$user->address}}</td>
                             <td>{{$user->phone_number}}</td>
                             <td>{{$user->gender}}</td>
-                            <td>{{$user->education}}</td>
                             <td>{{$user->description}}</td>
                             <td><img src="/profile/{{$user->image}}" width="120"></td>
                         </tr>

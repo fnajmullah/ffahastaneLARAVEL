@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Gell wellsoon FFAHastane</title>
+    <title>Gell wellsoon</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <img rel="icon" type="image/png" href="{{asset('ffahastanelogo.png') }}">
+    <img rel="icon" type="image/png" href="{{asset('Logo.png') }}">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
 

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'FFAHastane') }}</title>
+    <title>{{ config('app.name', 'Corridor') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -26,7 +26,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="icon" type="image/png" href="{{asset('ffahastanelogo.png') }}">
+    
 </head>
 
 <body>
@@ -35,7 +35,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img class="logo" alt="logo" src="{{asset('logo.png') }}" />
-                    {{ config('app.name', 'FFAHastane') }}
+                    {{ config('app.name', 'Corridor') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

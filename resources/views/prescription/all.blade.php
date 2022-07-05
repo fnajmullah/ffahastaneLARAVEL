@@ -21,7 +21,6 @@
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Gender</th>
-
                 <th scope="col">Time</th>
                 <th scope="col">Doctor</th>
                 <th scope="col">Status</th>
@@ -31,12 +30,11 @@
             <tbody>
               @forelse($patients as $key=>$patient)
               <tr>
-                <th scope="row">{{$key+1}}</th>
-                <td><img src="/profile/{{$patient->user->image}}" width="80" style="border-radius: 50%;">
-                </td>
+                <td scope="row">{{$key+1}}</td>
                 <td>
-
+                  <img src="/profile/{{$patient->user->image}}" width="80" style="border-radius: 50%;">
                 </td>
+                <td>{{$patient->date}}</td>
                 <td>{{$patient->user->name}}</td>
                 <td>{{$patient->user->email}}</td>
                 <td>{{$patient->user->phone_number}}</td>

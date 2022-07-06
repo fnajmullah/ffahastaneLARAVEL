@@ -7,7 +7,7 @@ return [
     'producta.description.p2' => 'And on the whole, no one is less likely to be able to prevent him from rejecting them himself. Do they foresee the choice of pleasures and pains to be the services of the inventor? But are they especially annoying, accusing us of the exercise of a distinction in life, or of being free from the needs of a mode that is greater than some architect, that of the pains and pleasures that they provide here? And with the slightest desire it will come to pass, that no one will obtain the services which result in great pain. And he, by whom, I will explain to make the flight of the present, the very unencumbered of the other just, of the things which, in order that they may obtain the more severe pain for the corrupt, they shall receive the more severe punishment.',
     'producta.description.p3' => 'He is obliged, by flight of mind, to perform certain duties, and when he finds fault with them, as it were, he is extremely harsh and accepts them. There is no way that some people find time to experience the pain and discomfort or hatred of the truth by enduring the pain, which is to do! But let every one of these methods, therefore, seek the main result from the pleasures, not the pain, not even our great masters, blinded by the architect, but to receive him, whence comes the guilt of rejecting what will happen to his debts! They often eschew offshore services. They abandon a great cause, because it will follow him, but by reason of that nothing will happen to him; How do we accept the divorce? We accuse ourselves of something similar with the same eagerness and hard work. Commodus, corrupted by these.',
     'producta.description.p4' => 'Nothing prevents the child from being blinded by the times of the body to the choice of the inventor to be accepted by his admirers; Do we think that he was most blinded by what was said, but corrupted by the necessities of life, that he was here for the advantage of that great effort, and that he accepted those flattery? It is of great importance that he receives nothing from him which he is responsible for. I\'ll explain the main effort most worthy of all, often, when the loose mind rejects it, let it be a pleasure at the moment. Explain the consequences, the hard work and the guilt that often prevents the accusers from taking on some of the harshest pains in the business, the consequences, or the repelling they foresee, they do not know that there are other pleasures in choosing their chosen flattery! But to follow him, he repulses with pleasures that he must not accept any words which he regards to pains.',
-    'footer.note'=>'2022 ffaHastane, Inc. All rights reserved.',
+    'footer.note'=>'2022 Corridor, Inc. All rights reserved.',
     'footer.feedback'=>'FeedBack/Complain',
     'footer.investment'=>'Investment Opportunities',
     'footer.franchising'=>'Franchising',
@@ -60,9 +60,9 @@ return [
     'expertise'=>'Expertise',
     'booking'=>'Booking',
     'bookappointment'=>'Book Appointment',
-    
     'loggedin'=>'You are logged in!',
-    ''=>'',
+    'createhistory'=>'Patient History',
+    
     ''=>'',
     ''=>'',
     ''=>'',

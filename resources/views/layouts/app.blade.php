@@ -151,7 +151,7 @@
                         @endif
                         @else
                         @if(auth()->user()->role->name === 'patient')
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{__('messages.header.appointments')}}
                             </a>
@@ -161,10 +161,14 @@
                                 <li><a class="dropdown-item" href="#"><a class="dropdown-item" href="{{ route('bookappointmentbydepartment') }}">{{ __('Booking By Clinik') }}</a></a></li>
                                 <li><a class="dropdown-item" href="#"><a class="dropdown-item" href="{{ route('bookappointmentbylocation') }}">{{ __('Booking By Location') }}</a></a></li>
                             </ul>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('patienthistory.create') }}">{{ __('messages.createhistory') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('patienthistory.create') }}">{{ __('Create History') }}</a>
+                            <a class="nav-link" href="{{  route('homepage') }}">{{ __('messages.bookappointment') }}</a>
                         </li>
+                        
                         @endif
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

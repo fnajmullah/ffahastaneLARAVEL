@@ -7,7 +7,7 @@ return [
     'producta.description.p2' => 'Ve genel olarak, hiç kimsenin onları reddetmesini engellemesi daha az olası değildir. Zevklerin ve acıların seçiminin mucidin hizmeti olacağını öngörüyorlar mı? Ama bizi yaşamda bir ayrım uygulamakla ya da bir mimardan daha büyük bir tarzın, burada sağladıkları acı ve zevklerin ihtiyaçlarından özgür olmakla suçlayarak özellikle can sıkıcı mı? Ve en ufak bir arzuyla, hiç kimsenin büyük acılarla sonuçlanan hizmetleri alamaması gerçekleşecektir. Ve o, kimin tarafından, şimdiki zamanın kaçışını, diğerinin engelsiz olanı adil yapmayı, yozlaşmışlar için daha şiddetli acı çekebilmeleri için, daha şiddetli alacakları şeylerden açıklayacağım. ceza.',
     'producta.description.p3' => 'Zihinsel olarak belirli görevleri yerine getirmek zorundadır ve onlarda deyim yerindeyse bir kusur bulduğunda son derece sert davranır ve onları kabul eder. Bazı insanların acıya katlanmak suretiyle acıyı ve rahatsızlığı ya da gerçeğin nefretini deneyimlemek için zaman bulması mümkün değil, ki bu yapmaktır! Ama bu yöntemlerin her biri, bu nedenle, asıl sonucu zevklerden, acıdan değil, hatta mimar tarafından kör edilen büyük ustalarımızdan bile değil, onu almak için, borçlarına ne olacağını reddetme suçundan kaynaklanan zevklerde aramasına izin verin. ! Genellikle denizaşırı hizmetlerden kaçınırlar. Büyük bir davayı terk ederler, çünkü o onu takip eder, fakat bu nedenle ona hiçbir şey olmaz; Boşanmayı nasıl kabul ederiz? Aynı şevk ve sıkı çalışmayla kendimizi buna benzer bir şeyle suçluyoruz. Commodus, bunlar tarafından bozuldu.',
     'producta.description.p4' => 'Çocuğun, vücudun zamanları tarafından, mucidin hayranları tarafından kabul edilmek üzere seçimine kör olmasını hiçbir şey engelleyemez; En çok söylenenlerle kör olduğunu, hayatın gereklilikleriyle yozlaştığını, bu büyük çabanın avantajı için burada olduğunu ve bu pohpohlanmaları kabul ettiğini mi sanıyoruz? Kendisinden sorumlu olduğu hiçbir şeyi almaması çok önemlidir. Hepsine en layık olan ana çabayı açıklayacağım, çoğu zaman, gevşek zihin onu reddettiğinde, o anda bir zevk olmasına izin verin. Suçlayanların işteki en şiddetli acılardan bazılarını üstlenmelerini engelleyen sonuçları, sıkı çalışmayı ve suçluluk duygusunu açıklayın, sonuçları veya öngördükleri kovucu, seçtikleri dalkavuğu seçmenin başka zevkleri olduğunu bilmiyorlar. ! Ama onun peşinden gitmekten zevk alarak, acı olarak gördüğü hiçbir sözü kabul etmemesi gerektiğini söyler.',
-    'footer.note'=>'2022 ffaHastane, Inc. Tüm hakları saklıdır.',
+    'footer.note'=>'2022 Corridor, Inc. Tüm hakları saklıdır.',
     'footer.feedback'=>'Geribildirim',
     'footer.investment'=>'yatırım fırsatları',  
     'footer.franchising'=>'franchising',
@@ -59,5 +59,6 @@ return [
     'expertise'=>'Uzmanlık',
     'booking'=>'Rezervasyon',
     'bookappointment'=>'Randevu Al',
+    'createhistory'=>'Hasta Geçmişi',
 
 ];

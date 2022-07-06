@@ -71,8 +71,11 @@
     <div class="card">
         <div class="card-header">Company Introduction Vedios</div>
         <div class="card-body">
-            <div class="ratio ratio-16x9">
+            <!-- <div class="ratio ratio-16x9">
                 <iframe src="{{asset('vedios/sample.mp4')}}" title="samplevedios" allowfullscreen></iframe>
+            </div> -->
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/RvreULjnzFo" allowfullscreen></iframe>
             </div>
         </div>
     </div>

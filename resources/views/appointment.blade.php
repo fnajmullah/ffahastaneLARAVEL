@@ -59,7 +59,15 @@
                 </div>
                 <div class="card-footer">
                     @if(Auth::check())
+
+                    @if(count($medicalconditions)>0)
                     <button type="submit" class="btn btn-success" style="width: 100%;">Book Appointment</button>
+                    @else
+                    <p>Please fill your history first to make an appointment
+                        <a href="{{ route('histories.create.step.one') }}">{{ __('messages.createhistory') }}</a>
+                    </p>
+                    @endif
+
                     @else
                     <p>Please login to make an appointment</p>
                     <a href="/register">Register</a>

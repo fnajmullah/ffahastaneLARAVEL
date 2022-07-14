@@ -47,7 +47,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::group(['middleware' => ['auth', 'admin']], function () { 
+Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('feedback', 'App\Http\Controllers\FeedBackController@index')->name('feedback.index');
     Route::get('feedback/{id}/edit', 'App\Http\Controllers\FeedBackController@edit')->name('feedback.edit');
     Route::get('feedback/{id}', 'App\Http\Controllers\FeedBackController@destroy')->name('feedback.destroy');
@@ -80,7 +80,24 @@ Route::group(['middleware' => ['auth', 'patient']], function () {
     Route::get('/user-profile', 'App\Http\Controllers\ProfileController@index');
     Route::post('/user-profile', 'App\Http\Controllers\ProfileController@store')->name('profile.store');
     Route::post('/profile-pic', 'App\Http\Controllers\ProfileController@profilePic')->name('profile.pic');
-    Route::resource('patienthistory', 'App\Http\Controllers\PatienthistoryController');
+    // Route::resource('patienthistory', 'App\Http\Controllers\PatienthistoryController');
+
+
+    Route::get('histories', 'App\Http\Controllers\PatienthistoryController@index')->name('histories.index');
+    Route::get('histories/create-step-one', 'App\Http\Controllers\PatienthistoryController@createStepOne')->name('histories.create.step.one');
+    Route::get('histories/create-step-one/{id}', 'App\Http\Controllers\PatienthistoryController@deleteStepOne')->name('histories.delete.step.one');
+    Route::post('histories/create-step-one', 'App\Http\Controllers\PatienthistoryController@postCreateStepOne')->name('histories.create.step.one.post');
+    Route::get('histories/create-step-two', 'App\Http\Controllers\PatienthistoryController@createStepTwo')->name('histories.create.step.two');
+    Route::get('histories/create-step-two/{id}', 'App\Http\Controllers\PatienthistoryController@deleteStepTwo')->name('histories.delete.step.two');
+    Route::post('histories/create-step-two', 'App\Http\Controllers\PatienthistoryController@postCreateStepTwo')->name('histories.create.step.two.post');
+    Route::get('histories/create-step-three', 'App\Http\Controllers\PatienthistoryController@createStepThree')->name('histories.create.step.three');
+    Route::get('histories/create-step-three/{id}', 'App\Http\Controllers\PatienthistoryController@deleteStepThree')->name('histories.delete.step.three');
+    Route::post('histories/create-step-three', 'App\Http\Controllers\PatienthistoryController@postCreateStepThree')->name('histories.create.step.three.post');
+    Route::get('histories/create-step-four', 'App\Http\Controllers\PatienthistoryController@createStepFour')->name('histories.create.step.four');
+    Route::get('histories/create-step-four/{id}', 'App\Http\Controllers\PatienthistoryController@deleteStepFour')->name('histories.delete.step.four');
+    Route::post('histories/create-step-four', 'App\Http\Controllers\PatienthistoryController@postCreateStepFour')->name('histories.create.step.four.post');
+
+
     // Route::get('/patienthistory/create','App\Http\Controllers\PatienthistoryController@create')->name('patienthistory.create');
     // Route::post('/patienthistory/store','App\Http\Controllers\PatienthistoryController@store')->name('patienthistory.store');
 });

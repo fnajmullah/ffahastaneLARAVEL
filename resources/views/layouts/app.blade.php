@@ -26,7 +26,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -54,7 +54,7 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{__('messages.header.products')}} 
+                                {{__('messages.header.products')}}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ route('producta') }}">{{__('messages.header.products.producta')}}</a></li>
@@ -67,7 +67,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{__('messages.header.services')}}
+                                {{__('messages.header.services')}}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ route('transportation') }}">Transportation</a></li>
@@ -80,7 +80,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{__('messages.header.solutions')}} 
+                                {{__('messages.header.solutions')}}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ route('solutiona') }}">Solutions A</a></li>
@@ -89,7 +89,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{__('messages.header.abouts')}}
+                                {{__('messages.header.abouts')}}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ route('foundation') }}">Foundation</a></li>
@@ -98,7 +98,7 @@
                                 <li><a class="dropdown-item" href="{{ route('aim') }}">Aim</a></li>
                             </ul>
                         </li>
-                        
+
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Languages
@@ -112,22 +112,22 @@
                                 <li><a class="dropdown-item" href="#">Persian <img class="img-fluid flag-lang" src="{{asset('/images/flag-iran.png')}}" /></a></li>
                             </ul>
                         </li> -->
-                        
+
                         <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="flag-icon flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}"></span> {{ Config::get('languages')[App::getLocale()]['display'] }}
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @foreach (Config::get('languages') as $lang => $language)
-                                    @if ($lang != App::getLocale())
-                                            <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span class="flag-icon flag-icon-squared flag-icon-{{$language['flag-icon']}}"></span> {{$language['display']}}</a>
-                                    @endif
+                                @if ($lang != App::getLocale())
+                                <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span class="flag-icon flag-icon-squared flag-icon-{{$language['flag-icon']}}"></span> {{$language['display']}}</a>
+                                @endif
                                 @endforeach
-                                </div>
+                            </div>
                         </li>
 
 
-                    <!-- <li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
+                        <!-- <li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
                     </ul>
                     <form class="d-flex btn-search-field">
                         <input class="form-control me-2" type="search" placeholder="{{__('messages.header.search')}}" aria-label="Search">
@@ -162,13 +162,14 @@
                                 <li><a class="dropdown-item" href="#"><a class="dropdown-item" href="{{ route('bookappointmentbylocation') }}">{{ __('Booking By Location') }}</a></a></li>
                             </ul>
                         </li> -->
+
+
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('patienthistory.create') }}">{{ __('messages.createhistory') }}</a>
+                            <a class="nav-link" href="{{ route('histories.create.step.one') }}">{{ __('messages.createhistory') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{  route('homepage') }}">{{ __('messages.bookappointment') }}</a>
                         </li>
-                        
                         @endif
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -180,7 +181,7 @@
                                 <a class="dropdown-item" href="{{url('user-profile')}}">{{ __('messages.profile') }}</a>
                                 <a class="dropdown-item" href="{{ route('my.booking') }}">{{ __('My Booking') }}</a>
                                 <a class="dropdown-item" href="{{ route('my.prescription') }}">{{ __('My Prescriptions') }}</a>
-                                <a class="dropdown-item" href="{{ route('patienthistory.index') }}">{{ __('My History') }}</a>
+                                <a class="dropdown-item" href="{{ route('histories.index') }}">{{ __('My History') }}</a>
                                 @else
                                 <a class="dropdown-item" href="{{url('dashboard')}}">{{ __('messages.dashboard') }}</a>
                                 @endif
@@ -338,17 +339,20 @@
             height: auto;
             border-radius: 50%;
         }
-        .dropdown-item{
+
+        .dropdown-item {
             display: flex;
             align-items: center;
         }
-        .flag-icon{
+
+        .flag-icon {
             border-radius: 50%;
             width: 20px !important;
             height: 20px !important;
             margin-right: 5px;
         }
-        .homelink{
+
+        .homelink {
             display: flex;
             flex-direction: row;
         }

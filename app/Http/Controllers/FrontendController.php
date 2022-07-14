@@ -29,40 +29,40 @@ class FrontendController extends Controller
         $doctors = Appointment::where('date', date('Y-m-d'))->get();
         return view('welcome', compact('doctors'));
     }
-    
 
-    public function babydoctor()
-    {
-        date_default_timezone_set('Europe/Istanbul');
-        if (request('name')) {
-            $doctors = $this->findDoctorsBasedOnName(request('name'));
-            return view('welcomebydoctor', compact('doctors'));
-        }
-        $doctors = Appointment::where('date', date('Y-m-d'))->get();
-        return view('welcomebydoctor', compact('doctors'));
-    }
 
-    public function babydepartment()
-    {
-        date_default_timezone_set('Europe/Istanbul');
-        if (request('speciality')) {
-            $doctors = $this->findDoctorsBasedOnLocation(request('speciality'));
-            return view('welcomebydepartment', compact('doctors'));
-        }
-        $doctors = Appointment::where('date', date('Y-m-d'))->get();
-        return view('welcomebydepartment', compact('doctors'));
-    }
+    // public function babydoctor()
+    // {
+    //     date_default_timezone_set('Europe/Istanbul');
+    //     if (request('name')) {
+    //         $doctors = $this->findDoctorsBasedOnName(request('name'));
+    //         return view('welcomebydoctor', compact('doctors'));
+    //     }
+    //     $doctors = Appointment::where('date', date('Y-m-d'))->get();
+    //     return view('welcomebydoctor', compact('doctors'));
+    // }
 
-    public function babylocation()
-    {
-        date_default_timezone_set('Europe/Istanbul');
-        if (request('date')) {
-            $doctors = $this->findDoctorsBasedOnDate(request('date'));
-            return view('welcomebylocation', compact('doctors'));
-        }
-        $doctors = Appointment::where('date', date('Y-m-d'))->get();
-        return view('welcomebylocation', compact('doctors'));
-    }
+    // public function babydepartment()
+    // {
+    //     date_default_timezone_set('Europe/Istanbul');
+    //     if (request('speciality')) {
+    //         $doctors = $this->findDoctorsBasedOnLocation(request('speciality'));
+    //         return view('welcomebydepartment', compact('doctors'));
+    //     }
+    //     $doctors = Appointment::where('date', date('Y-m-d'))->get();
+    //     return view('welcomebydepartment', compact('doctors'));
+    // }
+
+    // public function babylocation()
+    // {
+    //     date_default_timezone_set('Europe/Istanbul');
+    //     if (request('date')) {
+    //         $doctors = $this->findDoctorsBasedOnDate(request('date'));
+    //         return view('welcomebylocation', compact('doctors'));
+    //     }
+    //     $doctors = Appointment::where('date', date('Y-m-d'))->get();
+    //     return view('welcomebylocation', compact('doctors'));
+    // }
 
     public function show($doctorId, $date)
     {
@@ -70,7 +70,10 @@ class FrontendController extends Controller
         $times = Time::where('appointment_id', $appointment->id)->where('status', 0)->get();
         $user = User::where('id', $doctorId)->first();
         $doctor_id = $doctorId;
-        return view('appointment', compact('times', 'date', 'user', 'doctor_id'));
+
+        $medicalconditions = Medicalcondition::where('user_id', auth()->user()->id)->get();
+
+        return view('appointment', compact('times', 'date', 'user', 'doctor_id', 'medicalconditions'));
     }
 
     public function findDoctorsBasedOnDate($date)
@@ -230,13 +233,9 @@ class FrontendController extends Controller
     {
         return view('frontend.career');
     }
-    
+
     public function privacypolicy()
     {
         return view('frontend.privacypolicy');
     }
-    
-
-
-
 }

@@ -75,7 +75,7 @@ class PatienthistoryController extends Controller
         $destination=public_path('/images/patienthistory');
         $aimage->move($destination,$name);
         
-        $operation = Attachment::create([
+        $attachment = Attachment::create([
             'name' => $request->aname,
             'image'=> $name,
             'user_id' => auth()->user()->id
@@ -160,4 +160,170 @@ class PatienthistoryController extends Controller
         ]);
     }
 
+
+
+
+
+
+
+
+
+    public function createStepOne(Request $request)
+    {
+        return view('admin.history.create-step-one');
+    }
+
+    public function deleteStepOne($id)
+    {
+        $medicalconidtion = Medicalcondition::where('id',$id)->delete();
+        return redirect()->route('histories.index')->with('message', 'Medical Condition deleted successfully');
+    }
+  
+    /**  
+     * Post Request to store step1 info in session
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postCreateStepOne(Request $request)
+    {
+        $validatedData = $request->validate([
+            'smoking' => 'required',
+            'alcohol' => 'required',
+            'hypertention' => 'required',
+            'diabetes' => 'required',
+            'headache' => 'required',
+        ]);
+        $medicalcondition = Medicalcondition::create([
+            'smoking' => $request->smoking,
+            'alkol' => $request->alcohol,
+            'hypertension' => $request->hypertention,
+            'diabetes' => $request->diabetes,
+            'headache' => $request->headache,
+            'user_id' => auth()->user()->id
+        ]);
+  
+        return redirect()->route('histories.create.step.two');
+    }
+  
+    /**
+     * Show the step One Form for creating a new product.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function createStepTwo(Request $request)
+    {
+        // $product = $request->session()->get('product');
+        // ,compact('product')
+        return view('admin.history.create-step-two');
+    }
+
+    public function deleteStepTwo($id)
+    {
+        $medication = Medication::where('id',$id)->delete();
+        return redirect()->route('histories.index')->with('message', 'Medication deleted successfully');
+    }
+  
+    /**
+     * Show the step One Form for creating a new product.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function postCreateStepTwo(Request $request)
+    {
+        $validatedData = $request->validate([
+            'meditation' => 'required',
+        ]);
+
+        $meditation = Medication::create([
+            'name' => $request->meditation,
+            'user_id' => auth()->user()->id
+        ]);
+        return redirect()->route('histories.create.step.three');
+    }
+  
+    /**
+     * Show the step One Form for creating a new product.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function createStepThree(Request $request)
+    {
+        // $product = $request->session()->get('product');
+        // ,compact('product')
+  
+        return view('admin.history.create-step-three');
+    }
+
+    public function deleteStepThree($id)
+    {
+        $operation = Operation::where('id',$id)->delete();
+        return redirect()->route('histories.index')->with('message', 'Operation deleted successfully');
+    }
+  
+    /**
+     * Show the step One Form for creating a new product.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function postCreateStepThree(Request $request)
+    {
+        $validatedData = $request->validate([
+            'oname' => 'required',
+            'odescription' => 'required',
+            
+        ]);
+        $operation = Operation::create([
+            'name' => $request->oname,
+            'description' => $request->odescription,
+            'user_id' => auth()->user()->id
+        ]);
+  
+        return redirect()->route('histories.create.step.four');
+    }
+
+
+    /**
+     * Show the step One Form for creating a new product.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function createStepFour(Request $request)
+    {
+         return view('admin.history.create-step-four');
+    }
+
+    public function deleteStepFour($id)
+    {
+        $attachment = Attachment::where('id',$id)->delete();
+        return redirect()->route('histories.index')->with('message', 'Attachment deleted successfully');
+    }
+  
+    /**
+     * Show the step One Form for creating a new product.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function postCreateStepFour(Request $request)
+    {
+
+        $validatedData = $request->validate([
+            'aname' => 'required',
+            'aimage' => 'required|mimes:jpeg,jpg,png,pdf',
+        ]);
+        $aimage=$request->file('aimage');
+        $name=$aimage->hashName();
+        $destination=public_path('/images/patienthistory');
+        $aimage->move($destination,$name);
+        
+        $attachment = Attachment::create([
+        'name' => $request->aname,
+        'image'=> $name,
+        'user_id' => auth()->user()->id
+    ]); 
+        
+        
+
+        return redirect()->route('histories.index');
+    }
 }

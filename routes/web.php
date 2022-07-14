@@ -48,7 +48,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
-    Route::get('feedback', 'App\Http\Controllers\FeedBackController@index')->name('feedback.index');
+    Route::get('cfeedback', 'App\Http\Controllers\FeedBackController@index')->name('feedback.index');
     Route::get('feedback/{id}/edit', 'App\Http\Controllers\FeedBackController@edit')->name('feedback.edit');
     Route::get('feedback/{id}', 'App\Http\Controllers\FeedBackController@destroy')->name('feedback.destroy');
 

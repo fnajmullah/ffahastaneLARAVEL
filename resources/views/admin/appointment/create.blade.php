@@ -45,7 +45,7 @@
         Choose date
       </div>
       <div class="card-body">
-        <input type="text" class="form-control datetimepicker-input" id="datepicker" data-toggle="datetimepicker" data-target="#datepicker" name="date">
+      <input type="text"  data-date-format="YYYY-MM-DD" id="datepicker"  data-target="#datepicker" data-toggle="datetimepicker"  class=" form-control  datepicker" name="date">
       </div>
     </div>
 
@@ -189,10 +189,18 @@
   input[type="checkbox"] {
     zoom: 1.5;
   }
+  
 
   body {
     font-size: 20px;
   }
 </style>
+
+<script type="text/javascript">
+$.fn.datepicker.defaults.format = "yyyy-mm-dd";
+$('.datepicker').datepicker({
+    startDate: '-3d'
+});
+</script>
 
 @endsection

@@ -13,7 +13,7 @@
             Filter:
             <div class="row">
               <div class="col-md-10">
-                <input type="text" class="form-control datetimepicker-input" id="datepicker" data-toggle="datetimepicker" data-target="#datepicker" name="date">
+                <input type="text" data-date-format="YYYY-MM-DD"  class="form-control datetimepicker-input" id="datepicker" data-toggle="datetimepicker" data-target="#datepicker" name="date">
               </div>
               <div class="col-md-2">
                 <button type="submit" class="btn btn-primary">Search</button>

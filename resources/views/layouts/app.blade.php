@@ -46,9 +46,9 @@
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             @if(Auth::check())
-                            <a class="nav-link homelink active" aria-current="page" href="/dashboard"><i class="bi bi-house-heart-fill"></i>{{__('messages.header.home')}}</a>
+                            <a class="nav-link homelink active" aria-current="page" href="/dashboard"><i class="bi bi-house-heart"></i>{{__('messages.header.home')}}</a>
                             @else
-                            <a class="nav-link homelink active" aria-current="page" href="/"><i class="bi bi-house-heart-fill"></i>{{__('messages.header.home')}}</a>
+                            <a class="nav-link homelink active" aria-current="page" href="/"><i class="bi bi-house-heart"></i>{{__('messages.header.home')}}</a>
                             @endif
                         </li>
 
@@ -58,11 +58,6 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ route('producta') }}">{{__('messages.header.products.producta')}}</a></li>
-                                <li><a class="dropdown-item" href="#">Product B</a></li>
-                                <li><a class="dropdown-item" href="#">Product C</a></li>
-                                <li><a class="dropdown-item" href="#">Product D</a></li>
-                                <li><a class="dropdown-item" href="#">Product E</a></li>
-                                <li><a class="dropdown-item" href="#">Product F</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">

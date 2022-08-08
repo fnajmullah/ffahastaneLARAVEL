@@ -25,14 +25,9 @@ return [
     'header.appointments'=>'Appointments',
     'header.bookingbydate'=>'Book By Date',
     'logout'=>'Logout',
-    'welcomecontent.title'=>'Create an account & Book your appointment',
-    'welcomecontent.description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ',
-    'welcomecontent.registeraspatient'=>'Register as Patient',
+    'welcomecontent.title'=>'Welcome to Corridor',
+    'welcomecontent.description'=>'Corridor is to automate private health checkup tourizm in Turkey. we want to make system to bring transparency using autonomous system. Create an account & Schedule your appointment',
+    'welcomecontent.registeraspatient'=>'Register',
     
     'emailaddress'=>'Email Address',
     'password'=>'Password',

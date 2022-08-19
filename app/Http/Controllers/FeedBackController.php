@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Feedback;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class FeedBackController extends Controller
 {
@@ -101,7 +102,7 @@ class FeedBackController extends Controller
     public function validateStore($request)
     {
         return  $this->validate($request, [
-            'name' => 'required' . \Auth::id(),
+            'name' => 'required' . Auth::id(),
             'description' => 'required'
 
         ]);

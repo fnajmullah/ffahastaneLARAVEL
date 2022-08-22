@@ -70,9 +70,12 @@ class FrontendController extends Controller
         $times = Time::where('appointment_id', $appointment->id)->where('status', 0)->get();
         $user = User::where('id', $doctorId)->first();
         $doctor_id = $doctorId;
-
-        $medicalconditions = Medicalcondition::where('user_id', auth()->user()->id)->get();
-
+        if( auth()->check()){
+            $medicalconditions = Medicalcondition::where('user_id', auth()->user()->id)->get();
+        }
+        else{
+            $medicalconditions="";
+        }
         return view('appointment', compact('times', 'date', 'user', 'doctor_id', 'medicalconditions'));
     }
 

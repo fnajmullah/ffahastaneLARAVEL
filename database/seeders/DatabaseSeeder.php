@@ -23,8 +23,8 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'Fridoon Admin',
             'email' => 'fnajmullah@gmail.com',
-            'email_verfied_at' => '',
-            'password' => 'fnajmullah@gmail.com',
+            'email_verified_at' => null,
+            'password' => bcrypt('fnajmullah@gmail.com'),
             'role_id' => '1',
             'gender' => 'male',
             'address' => 'Zeytinburnu',
@@ -32,29 +32,29 @@ class DatabaseSeeder extends Seeder
             'department' => '',
             'image' => '1656219356.jpg',
             'education' => '',
-            'descrition' => '',
+            'description' => '',
             'remember_token' => ''
         ]);
         User::create([
             'name' => 'Azizullah Nazari',
             'email' => 'doctor@doctor.com',
-            'email_verfied_at' => '',
-            'password' => 'doctor@doctor.com',
+            'email_verified_at' => null,
+            'password' => bcrypt('doctor@doctor.com'),
             'role_id' => '2',
             'gender' => 'male',
             'address' => 'Zeytinburnu',
             'phone_number' => '05551526700',
-            'department' => '',
+            'department' => 'Family Medicine ',
             'image' => '1655126663.png',
             'education' => '',
-            'descrition' => '',
+            'description' => '',
             'remember_token' => ''
         ]);
         User::create([
             'name' => 'Faruk Kurys',
             'email' => 'patient@patient.com',
-            'email_verfied_at' => '',
-            'password' => 'patient@patient.com',
+            'email_verified_at' => null,
+            'password' => bcrypt('patient@patient.com'),
             'role_id' => '3',
             'gender' => 'male',
             'address' => 'Zeytinburnu',
@@ -62,7 +62,7 @@ class DatabaseSeeder extends Seeder
             'department' => '',
             'image' => '1655126471.png',
             'education' => '',
-            'descrition' => '',
+            'description' => '',
             'remember_token' => ''
         ]);
 

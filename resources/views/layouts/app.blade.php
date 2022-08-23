@@ -34,7 +34,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img class="logo" alt="logo" src="{{asset('logo.png') }}" />
+                    <img class="logo" alt="logo" src="{{asset('corridor-logo.png') }}" />
                     {{ config('app.name', 'Corridor') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -88,7 +88,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ route('foundation') }}">Foundation</a></li>
-                                <li><a class="dropdown-item" href="{{ route('collaboration') }}">Collaborations with prestigious institutions(Cordination)</a></li>
+                                <li><a class="dropdown-item" href="{{ route('collaboration') }}">Colb. prestigious inst.</a></li>
                                 <li><a class="dropdown-item" href="{{ route('mission') }}">Mission/Purpose</a></li>
                                 <li><a class="dropdown-item" href="{{ route('aim') }}">Aim</a></li>
                             </ul>
@@ -109,8 +109,8 @@
                         </li> -->
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="flag-icon flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}"></span> {{ Config::get('languages')[App::getLocale()]['display'] }}
+                            <a style="display:flex; align-items:center;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="flag-icon flag-icon-squared flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}" ></span> <span> {{ Config::get('languages')[App::getLocale()]['display'] }} </span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @foreach (Config::get('languages') as $lang => $language)

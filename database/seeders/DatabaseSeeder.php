@@ -9,7 +9,12 @@ use App\Models\User;
 use App\Models\Appointment;
 use App\Models\Booking;
 use App\Models\Feedback;
+use App\Models\Medicalcondition;
+use App\Models\Prescription;
+use App\Models\Time;
 use Illuminate\Support\Carbon;
+
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -50,8 +55,6 @@ class DatabaseSeeder extends Seeder
             'description' => '',
             'remember_token' => ''
         ]);
-        
-        
         User::create([
             'name' => 'Prof. Ayşe Dilek DOĞU',
             'email' => 'addogu@iuc.edu.tr',
@@ -67,12 +70,6 @@ class DatabaseSeeder extends Seeder
             'description' => 'Istanbul University, Institute Of Graduate Studies In Sciences, Orman Endüstri Mühendisliği Anabilim Dalı / Orman Biyolojisi Ve Odun Koruma Teknolojisi Programı, Turkey',
             'remember_token' => ''
         ]);
-
-
-
-
-
-
         User::create([
             'name' => 'Prof. MATEM TUNÇDEMİR',
             'email' => 'tmatem@iuc.edu.tr',
@@ -88,8 +85,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Istanbul University, Cerrahpaşa Tıp Fakültesi, Tıbbi Biyoloji, Turkey',
             'remember_token' => ''
         ]);
-
-User::create([
+        User::create([
             'name' => 'Prof. Özlem SAÇAN',
             'email' => 'osacan@iuc.edu.tr',
             'email_verified_at' => null,
@@ -104,7 +100,6 @@ User::create([
             'description' => 'Istanbul University, Fen Bilimleri, Kimya/Biyokimya, Turkey',
             'remember_token' => ''
         ]);
-
         User::create([
             'name' => 'Lect. CEREN ÇAĞLAR',
             'email' => 'ceren.caglar@iuc.edu.tr',
@@ -120,7 +115,6 @@ User::create([
             'description' => 'Istanbul University, Institute Of Graduate Studies In Sciences, Informatics Department, Turkey',
             'remember_token' => ''
         ]);
-
         User::create([
             'name' => 'Asst. Prof. FATMA DİĞDEM TUNCER',
             'email' => 'fdigdemt@iuc.edu.tr',
@@ -136,7 +130,6 @@ User::create([
             'description' => 'İstanbul University-Cerrahpaşa, Institute Of Graduate Education, Department Of Forest Industry Engineering, Turkey',
             'remember_token' => ''
         ]);
-
         User::create([
             'name' => 'Res. Asst. Mustafa Fatih ERGİN',
             'email' => 'mfergin@iuc.edu.tr',
@@ -152,7 +145,6 @@ User::create([
             'description' => 'İstanbul Üniversitesi, Mühendislik Fakültesi, Kimya Mühendisliği, Proses ve Reaktör Tasarımı ABD, Avcılar/İstanbul',
             'remember_token' => ''
         ]);
-
         User::create([
             'name' => 'Res. Asst. CENK DAĞLIOĞLU',
             'email' => 'cenk.daglioglu@iuc.edu.tr',
@@ -168,8 +160,6 @@ User::create([
             'description' => 'Avcılar/İstanbul',
             'remember_token' => ''
         ]);
-
-
         User::create([
             'name' => 'Faruk Kurys',
             'email' => 'patient@patient.com',
@@ -185,6 +175,7 @@ User::create([
             'description' => '',
             'remember_token' => ''
         ]);
+
         Appointment::create(['user_id'=>'2','date'=> Carbon::now()->format('Y-m-d')]);
         Appointment::create(['user_id'=>'2','date'=> Carbon::tomorrow()->format('Y-m-d')]);
         Appointment::create(['user_id'=>'3','date'=> Carbon::now()->format('Y-m-d')]);
@@ -202,8 +193,31 @@ User::create([
         Appointment::create(['user_id'=>'9','date'=> Carbon::now()->format('Y-m-d')]);
         Appointment::create(['user_id'=>'9','date'=> Carbon::tomorrow()->format('Y-m-d')]);
 
-        Booking::create(['user_id'=>'10','doctor_id'=>'2','date'=>Carbon::today()->format('Y-m-d'),'time'=>'6am','status'=>'0']);
-        Booking::create(['user_id'=>'10','doctor_id'=>'4','date'=>Carbon::tomorrow()->format('Y-m-d'),'time'=>'6am','status'=>'0']);
+        Time::create(['appointment_id'=>'1','time'=>'6am','status'=>'0']);
+        Time::create(['appointment_id'=>'2','time'=>'6.20am','status'=>'0']);
+        Time::create(['appointment_id'=>'3','time'=>'6.40am','status'=>'0']);
+        Time::create(['appointment_id'=>'4','time'=>'7am','status'=>'0']);
+        Time::create(['appointment_id'=>'5','time'=>'7.20am','status'=>'0']);
+        Time::create(['appointment_id'=>'6','time'=>'7.40am','status'=>'0']);
+        Time::create(['appointment_id'=>'7','time'=>'8am','status'=>'0']);
+        Time::create(['appointment_id'=>'8','time'=>'8.20am','status'=>'0']);
+        Time::create(['appointment_id'=>'9','time'=>'8.40am','status'=>'0']);
+        Time::create(['appointment_id'=>'10','time'=>'9am','status'=>'0']);
+        Time::create(['appointment_id'=>'11','time'=>'9.20am','status'=>'0']);
+        Time::create(['appointment_id'=>'12','time'=>'9.40am','status'=>'0']);
+        Time::create(['appointment_id'=>'13','time'=>'10am','status'=>'0']);
+        Time::create(['appointment_id'=>'14','time'=>'10.20am','status'=>'0']);
+        Time::create(['appointment_id'=>'15','time'=>'10.40am','status'=>'0']);
+        Time::create(['appointment_id'=>'16','time'=>'11am','status'=>'0']);
+
+        Booking::create(['user_id'=>'10','doctor_id'=>'2','date'=>Carbon::today()->format('Y-m-d'),'time'=>'6am','status'=>'1']);
+
+        Medicalcondition::create(['smoking'=>'1','alkol'=>'1','diabetes'=>'0','hypertension'=>'1','headache'=>'1','user_id'=>'10']);
+
+        Prescription::create(['name_of_disease'=>'malaria',
+        'symptoms'=>'symptoms note','user_id'=>'10','doctor_id'=>'2',
+        'date'=>Carbon::today()->format('Y-m-d'),'medicine'=>'medica1,medican2,medican3',
+        'procedure_to_use_medicine'=>'3 time per 24 hours','feedback'=>'no feedback','signature'=>'my signatre']);
 
         // \App\Models\User::factory(10)->create();
         Role::create(['name' => 'admin']);

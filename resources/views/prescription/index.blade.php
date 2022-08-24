@@ -10,7 +10,6 @@
         </div>
         @endif
         <div class="card-header">
-
           Appointment ({{$bookings->count()}})
         </div>
 
@@ -25,7 +24,6 @@
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Gender</th>
-
                 <th scope="col">Time</th>
                 <th scope="col">Doctor</th>
                 <th scope="col">Status</th>

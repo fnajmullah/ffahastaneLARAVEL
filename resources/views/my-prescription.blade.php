@@ -7,7 +7,7 @@
       <div class="card">
         <div class="card-header">My prescriptions</div>
 
-        <div class="card-body">
+        <div class="card-body overflow-auto">
 
           <table class="table table-striped">
             <thead>
@@ -24,7 +24,6 @@
             <tbody>
               @forelse($prescriptions as $prescription)
               <tr>
-
                 <td>{{$prescription->date}}</td>
                 <td>{{$prescription->doctor->name}}</td>
                 <td>{{$prescription->name_of_disease}}</td>

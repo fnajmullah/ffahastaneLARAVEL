@@ -15,7 +15,7 @@
 
       <div class="card mt-5">
         <div class="card-header">Doctors</div>
-        <div class="card-body">
+        <div class="card-body overflow-auto">
           <table class="table table-striped">
             <thead>
               <tr>
@@ -36,7 +36,7 @@
                 <td>{{ d.doctor.department }}</td>
                 <td>
                   <a :href="'/new-appointment/' + d.user_id + '/' + d.date"
-                    ><button class="btn btn-success">
+                    ><button class="btn btn-success" style="height:auto">
                       Book Appointment
                     </button></a
                   >

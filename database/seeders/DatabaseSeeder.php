@@ -50,6 +50,126 @@ class DatabaseSeeder extends Seeder
             'description' => '',
             'remember_token' => ''
         ]);
+        
+        
+        User::create([
+            'name' => 'Prof. Ayşe Dilek DOĞU',
+            'email' => 'addogu@iuc.edu.tr',
+            'email_verified_at' => null,
+            'password' => bcrypt('addogu@iuc.edu.tr'),
+            'role_id' => '2',
+            'gender' => 'female',
+            'address' => 'İ.Ü.C. ORMAN FAKÜLTESİ ORMAN ENDÜSTRİ MÜH.BÖL., 34473 BAHÇEKÖY-SARIYER/ISTANBUL',
+            'phone_number' => '+902123382400',
+            'department' => 'Faculty Of Forest',
+            'image' => 'aysedilekdogu.jpg',
+            'education' => 'Doctorate',
+            'description' => 'Istanbul University, Institute Of Graduate Studies In Sciences, Orman Endüstri Mühendisliği Anabilim Dalı / Orman Biyolojisi Ve Odun Koruma Teknolojisi Programı, Turkey',
+            'remember_token' => ''
+        ]);
+
+
+
+
+
+
+        User::create([
+            'name' => 'Prof. MATEM TUNÇDEMİR',
+            'email' => 'tmatem@iuc.edu.tr',
+            'email_verified_at' => null,
+            'password' => bcrypt('tmatem@iuc.edu.tr'),
+            'role_id' => '2',
+            'gender' => 'male',
+            'address' => 'İstanbul Üniversitesi-Cerrahpaşa, Cerrahpaşa Tıp Fakültesi Temel Tıp Bilimleri Bölüm Başkanlığı Kat:2 Fatih-İSTANBUL',
+            'phone_number' => '+902124143000',
+            'department' => 'Cerrahpasa Faculty Of Medicine',
+            'image' => 'matem.jpg',
+            'education' => 'Doctorate',
+            'description' => 'Istanbul University, Cerrahpaşa Tıp Fakültesi, Tıbbi Biyoloji, Turkey',
+            'remember_token' => ''
+        ]);
+
+User::create([
+            'name' => 'Prof. Özlem SAÇAN',
+            'email' => 'osacan@iuc.edu.tr',
+            'email_verified_at' => null,
+            'password' => bcrypt('osacan@iuc.edu.tr'),
+            'role_id' => '2',
+            'gender' => 'female',
+            'address' => 'Fatih',
+            'phone_number' => '+90 212 473 7180',
+            'department' => 'Department Of Biochemistry',
+            'image' => 'ozlem.jpg',
+            'education' => 'Doctorate',
+            'description' => 'Istanbul University, Fen Bilimleri, Kimya/Biyokimya, Turkey',
+            'remember_token' => ''
+        ]);
+
+        User::create([
+            'name' => 'Lect. CEREN ÇAĞLAR',
+            'email' => 'ceren.caglar@iuc.edu.tr',
+            'email_verified_at' => null,
+            'password' => bcrypt('ceren.caglar@iuc.edu.tr'),
+            'role_id' => '2',
+            'gender' => 'female',
+            'address' => 'Zeytinburnu',
+            'phone_number' => '+90 212 473 7180',
+            'department' => 'Department Of Computer Technologies,',
+            'image' => 'ceren.jpg',
+            'education' => 'Postgraduate',
+            'description' => 'Istanbul University, Institute Of Graduate Studies In Sciences, Informatics Department, Turkey',
+            'remember_token' => ''
+        ]);
+
+        User::create([
+            'name' => 'Asst. Prof. FATMA DİĞDEM TUNCER',
+            'email' => 'fdigdemt@iuc.edu.tr',
+            'email_verified_at' => null,
+            'password' => bcrypt('fdigdemt@iuc.edu.tr'),
+            'role_id' => '2',
+            'gender' => 'female',
+            'address' => 'Irmak Binasi',
+            'phone_number' => '+90 212 338 2400',
+            'department' => 'Department Of Forest Biology And Wood Protection Technology',
+            'image' => 'fatma.jpg',
+            'education' => 'Doctorate',
+            'description' => 'İstanbul University-Cerrahpaşa, Institute Of Graduate Education, Department Of Forest Industry Engineering, Turkey',
+            'remember_token' => ''
+        ]);
+
+        User::create([
+            'name' => 'Res. Asst. Mustafa Fatih ERGİN',
+            'email' => 'mfergin@iuc.edu.tr',
+            'email_verified_at' => null,
+            'password' => bcrypt('mfergin@iuc.edu.tr'),
+            'role_id' => '2',
+            'gender' => 'male',
+            'address' => 'Avcilar',
+            'phone_number' => '+90 212 473 7070',
+            'department' => 'Department Of Process And Reactor Design',
+            'image' => 'fatih.jpg',
+            'education' => 'Post Doctorate',
+            'description' => 'İstanbul Üniversitesi, Mühendislik Fakültesi, Kimya Mühendisliği, Proses ve Reaktör Tasarımı ABD, Avcılar/İstanbul',
+            'remember_token' => ''
+        ]);
+
+        User::create([
+            'name' => 'Res. Asst. CENK DAĞLIOĞLU',
+            'email' => 'cenk.daglioglu@iuc.edu.tr',
+            'email_verified_at' => null,
+            'password' => bcrypt('cenk.daglioglu@iuc.edu.tr'),
+            'role_id' => '2',
+            'gender' => 'male',
+            'address' => 'Avcilar',
+            'phone_number' => '+90 212 473 7070',
+            'department' => 'Department Of Medical Biochemistry',
+            'image' => 'genel.png',
+            'education' => 'Graduate',
+            'description' => 'Avcılar/İstanbul',
+            'remember_token' => ''
+        ]);
+
+
         User::create([
             'name' => 'Faruk Kurys',
             'email' => 'patient@patient.com',
@@ -65,20 +185,25 @@ class DatabaseSeeder extends Seeder
             'description' => '',
             'remember_token' => ''
         ]);
+        Appointment::create(['user_id'=>'2','date'=> Carbon::now()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'2','date'=> Carbon::tomorrow()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'3','date'=> Carbon::now()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'3','date'=> Carbon::tomorrow()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'4','date'=> Carbon::now()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'4','date'=> Carbon::tomorrow()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'5','date'=> Carbon::now()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'5','date'=> Carbon::tomorrow()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'6','date'=> Carbon::now()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'6','date'=> Carbon::tomorrow()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'7','date'=> Carbon::now()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'7','date'=> Carbon::tomorrow()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'8','date'=> Carbon::now()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'8','date'=> Carbon::tomorrow()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'9','date'=> Carbon::now()->format('Y-m-d')]);
+        Appointment::create(['user_id'=>'9','date'=> Carbon::tomorrow()->format('Y-m-d')]);
 
-        Appointment::create(['user_id'=>'2',
-        'date'=> Carbon::now()->format('Y-m-d')]);
-        Appointment::create(['user_id'=>'2',
-        'date'=> Carbon::tomorrow()->format('Y-m-d')]);
-
-        Booking::create(['user_id'=>'3','doctor_id'=>'2',
-        'date'=>Carbon::today()->format('Y-m-d'),
-        'time'=>'6am',
-        'status'=>'0']);
-        Booking::create(['user_id'=>'3','doctor_id'=>'2',
-        'date'=>Carbon::tomorrow()->format('Y-m-d'),
-        'time'=>'6am',
-        'status'=>'0']);
+        Booking::create(['user_id'=>'10','doctor_id'=>'2','date'=>Carbon::today()->format('Y-m-d'),'time'=>'6am','status'=>'0']);
+        Booking::create(['user_id'=>'10','doctor_id'=>'4','date'=>Carbon::tomorrow()->format('Y-m-d'),'time'=>'6am','status'=>'0']);
 
         // \App\Models\User::factory(10)->create();
         Role::create(['name' => 'admin']);

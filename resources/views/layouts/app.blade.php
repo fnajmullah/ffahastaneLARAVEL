@@ -52,6 +52,7 @@
                             @endif
                         </li>
 
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {{__('messages.header.products')}}
@@ -108,7 +109,7 @@
                             </ul>
                         </li> -->
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown disabled" >
                             <a style="display:flex; align-items:center;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="flag-icon flag-icon-squared flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}" ></span> <span> {{ Config::get('languages')[App::getLocale()]['display'] }} </span>
                             </a>
@@ -121,7 +122,9 @@
                             </div>
                         </li>
 
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('internationalpatient') }}">{{ __('messages.internationalpatient') }}</a>
+                        </li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
                     </ul>
                     <form class="d-flex btn-search-field">

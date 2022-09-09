@@ -58,7 +58,7 @@ return [
     'loggedin'=>'You are logged in!',
     'createhistory'=>'Patient History',
     
-    ''=>'',
+    'internationalpatient'=>'International Patient',
     ''=>'',
     ''=>'',
     ''=>'',

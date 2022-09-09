@@ -131,7 +131,7 @@ class FrontendController extends Controller
 
         ];
         try {
-            // Mail::to(auth()->user()->email)->send(new AppointmentMail($mailData));
+        // Mail::to(auth()->user()->email)->send(netw AppointmentMail($mailData));
         } catch (\Exception $e) {
         }
 
@@ -240,5 +240,8 @@ class FrontendController extends Controller
     public function privacypolicy()
     {
         return view('frontend.privacypolicy');
+    }
+    public function internationalpatient(){
+        return view('frontend.internationalpateint');
     }
 }

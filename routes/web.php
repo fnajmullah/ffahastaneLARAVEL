@@ -42,6 +42,7 @@ Route::get('/investment', 'App\Http\Controllers\FrontendController@investment')-
 Route::get('/franchising', 'App\Http\Controllers\FrontendController@franchising')->name('franchising');
 Route::get('/career', 'App\Http\Controllers\FrontendController@career')->name('career');
 Route::get('/privacypolicy', 'App\Http\Controllers\FrontendController@privacypolicy')->name('privacypolicy');
+Route::get('/internationalpatient', 'App\Http\Controllers\FrontendController@internationalpatient')->name('internationalpatient');
 
 Auth::routes();
 

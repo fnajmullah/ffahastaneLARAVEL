@@ -242,6 +242,6 @@ class FrontendController extends Controller
         return view('frontend.privacypolicy');
     }
     public function internationalpatient(){
-        return view('frontend.internationalpateint');
+        return view('frontend.internationalpatient');
     }
 }

@@ -108,7 +108,9 @@
                                 <li><a class="dropdown-item" href="#">Persian <img class="img-fluid flag-lang" src="{{asset('/images/flag-iran.png')}}" /></a></li>
                             </ul>
                         </li> -->
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('internationalpatient') }}">{{ __('messages.internationalpatient') }}</a>
+                        </li>
                         <li class="nav-item dropdown disabled" >
                             <a style="display:flex; align-items:center;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="flag-icon flag-icon-squared flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}" ></span> <span> {{ Config::get('languages')[App::getLocale()]['display'] }} </span>
@@ -122,9 +124,7 @@
                             </div>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('internationalpatient') }}">{{ __('messages.internationalpatient') }}</a>
-                        </li>
+                        
                         <!-- <li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
                     </ul>
                     <form class="d-flex btn-search-field">

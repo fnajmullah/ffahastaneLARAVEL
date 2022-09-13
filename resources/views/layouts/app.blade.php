@@ -111,26 +111,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('internationalpatient') }}">{{ __('messages.internationalpatient') }}</a>
                         </li>
-                        <li class="nav-item dropdown disabled" >
-                            <a style="display:flex; align-items:center;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="flag-icon flag-icon-squared flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}" ></span> <span> {{ Config::get('languages')[App::getLocale()]['display'] }} </span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                @foreach (Config::get('languages') as $lang => $language)
-                                @if ($lang != App::getLocale())
-                                <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span class="flag-icon flag-icon-squared flag-icon-{{$language['flag-icon']}}"></span> {{$language['display']}}</a>
-                                @endif
-                                @endforeach
-                            </div>
-                        </li>
-
-                        
-                        <!-- <li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
                     </ul>
+
+
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
+
                     <form class="d-flex btn-search-field">
                         <input class="form-control me-2" type="search" placeholder="{{__('messages.header.search')}}" aria-label="Search">
                         <button class="btn-search btn btn-outline-success" type="submit">{{__('messages.header.search')}}</button>
                     </form>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
@@ -195,6 +185,18 @@
                         </li>
 
                         @endguest
+                        <li class="nav-item dropdown disabled">
+                            <a style="display:flex; align-items:center;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="flag-icon flag-icon-squared flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}"></span> <span> {{ Config::get('languages')[App::getLocale()]['display'] }} </span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @foreach (Config::get('languages') as $lang => $language)
+                                @if ($lang != App::getLocale())
+                                <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span class="flag-icon flag-icon-squared flag-icon-{{$language['flag-icon']}}"></span> {{$language['display']}}</a>
+                                @endif
+                                @endforeach
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

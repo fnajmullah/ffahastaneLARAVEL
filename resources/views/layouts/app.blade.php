@@ -108,9 +108,9 @@
                                 <li><a class="dropdown-item" href="#">Persian <img class="img-fluid flag-lang" src="{{asset('/images/flag-iran.png')}}" /></a></li>
                             </ul>
                         </li> -->
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('internationalpatient') }}">{{ __('messages.internationalpatient') }}</a>
-                        </li>
+                        </li> -->
                     </ul>
 
 
